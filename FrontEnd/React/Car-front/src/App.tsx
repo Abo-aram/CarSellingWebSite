@@ -7,11 +7,11 @@ import "./index.css";
 
 function App() {
   const RootLayout = () => (
-    <div>
+    <div className="flex flex-row ">
       {/* This could be a header, navbar, or any layout you want */}
-
-      <HomePage></HomePage>
       <DashBord></DashBord>
+      <HomePage></HomePage>
+
       <Outlet />
     </div>
   );
