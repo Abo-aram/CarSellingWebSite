@@ -23,9 +23,9 @@ const DashBord = () => {
       <IconContext.Provider value={{style:{fontSize:'20px' , paddingRight:'5px', color:'black' }}}>
 
 <div className="shadow-gray-600 shadow-lg bg-gray-100 sticky pl-4 pr-4 pt-8 h-screen w-1/6 max-w-52">
-        <h1 className="text-center text-2xl "><strong>WebName</strong></h1>
+        <h1 className="text-center text-2xl mt-5 border-black border-b-2 pb-2 "><strong>Carphy</strong></h1>
        
-      <div className="mt-20">
+      <div className="mt-14">
        
          <NavLink className={({isActive})=>{return isActive ? Active :inActive}} to={"/"} > <FaHome/>   <strong>Home</strong> </NavLink>
          <NavLink className={({isActive})=>{return isActive ? Active :inActive}} to={"Inventory"} ><FaCarSide/> <strong>Inventory</strong> </NavLink>
