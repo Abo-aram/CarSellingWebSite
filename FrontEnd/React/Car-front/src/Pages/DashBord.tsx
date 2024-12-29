@@ -4,6 +4,7 @@ import { FaTags } from 'react-icons/fa';
 import { FaMoneyBillWave } from 'react-icons/fa';
 import { FaInfoCircle } from 'react-icons/fa';
 import { FaPhone } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 
 
 import { IconContext } from 'react-icons';
@@ -14,6 +15,10 @@ import { IconContext } from 'react-icons';
 const DashBord = () => {
 
 
+  const Active ="flex items-center selected  pt-1 pb-1 border-black rounded-md  pl-1 mt-2";
+  const inActive = "hover-bg-white flex items-center pt-1 pb-1 border-black rounded-md  pl-1 mt-2";
+
+
   return (
       <IconContext.Provider value={{style:{fontSize:'20px' , paddingRight:'5px', color:'black' }}}>
 
@@ -22,12 +27,12 @@ const DashBord = () => {
        
       <div className="mt-20">
        
-        <p className="hover-bg-white   flex items-center selected  pt-1 pb-1 border-black rounded-md  pl-1 mt-2"> <FaHome/> <strong>Home</strong></p>
-        <p className="hover-bg-white flex items-center pt-1 pb-1 border-black rounded-md  pl-1 mt-2"> <FaCarSide/> <strong>Inventory</strong></p>
-        <p className="hover-bg-white flex items-center pt-1 pb-1 border-black rounded-md pl-1 mt-2"> <FaTags/> <strong>Offers</strong></p>
-        <p className="hover-bg-white flex items-center pt-1 pb-1 border-black rounded-md  pl-1 mt-2"> <FaMoneyBillWave/> <strong>Sell your car</strong></p>
-        <p className="hover-bg-white flex items-center pt-1 pb-1 border-black rounded-md  pl-1 mt-2"> <FaInfoCircle/> <strong>About Us</strong></p>
-        <p className="hover-bg-white flex items-center pt-1 pb-1 border-black rounded-md  pl-1 mt-2"> <FaPhone/> <strong> Contact Us</strong></p>
+         <NavLink className={({isActive})=>{return isActive ? Active :inActive}} to={"/"} > <FaHome/>   <strong>Home</strong> </NavLink>
+         <NavLink className={({isActive})=>{return isActive ? Active :inActive}} to={"Inventory"} ><FaCarSide/> <strong>Inventory</strong> </NavLink>
+         <NavLink className={({isActive})=>{return isActive ? Active :inActive}} to={"Offers"} ><FaTags/> <strong>Offers</strong> </NavLink>
+         <NavLink className={({isActive})=>{return isActive ? Active :inActive}} to={"Sellyourcar"} > <FaMoneyBillWave/> <strong>Sell your car</strong></NavLink>
+         <NavLink className={({isActive})=>{return isActive ? Active :inActive}} to={"AboutUs"} > <FaInfoCircle/> <strong>About Us</strong> </NavLink>
+         <NavLink className={({isActive})=>{return isActive ? Active :inActive}} to={"ContactUs"} > <FaPhone/> <strong> Contact Us</strong></NavLink>
       </div>
     </div>
   </IconContext.Provider>

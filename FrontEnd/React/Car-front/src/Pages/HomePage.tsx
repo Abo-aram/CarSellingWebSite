@@ -1,7 +1,16 @@
 const HomePage = () => {
   return (
     <>
-      <p>hello world</p>
+
+      <div>
+        <div>search</div>
+        <div>
+        
+        </div>
+      </div>
+   
+
+
     </>
   );
 };
